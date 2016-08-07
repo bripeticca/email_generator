@@ -1,0 +1,15 @@
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+string email_generator(void) {
+  int count;
+  printf("Please insert the number of emails you want.\n")
+  scanf("%d", count);
+
+  while (count >= 0) {
+    int email_begin = for(int i = 10; i > 0; --i) {
+      
+    }
+  }
+}
