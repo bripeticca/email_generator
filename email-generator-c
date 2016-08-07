@@ -8,8 +8,6 @@ string email_generator(void) {
   scanf("%d", count);
 
   while (count >= 0) {
-    int email_begin = for(int i = 10; i > 0; --i) {
-      
     }
   }
 }
