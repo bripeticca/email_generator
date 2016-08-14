@@ -15,10 +15,10 @@ int main(void) {
 
   if (scanf("%d", num) == 1) {
     email_generator(*num);
-    return 1;
     valid = false;
   } else {
     printf("Insert a valid input - should be > 0 and < 100.");
   }
 }
+return 1;
 }
