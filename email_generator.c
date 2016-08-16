@@ -35,6 +35,9 @@ void email_generator(int num) {
       ++placeholder;
       new_email[placeholder] = alphanumeric[rand() % len_alpha - 1];
     }
+    ++placeholder;
+
+    new_email[placeholder] = '\0'
 
     for(int y = 0; y < len; ++y) {
       printf("%c", new_email[y]);
