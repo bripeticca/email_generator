@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "email_generator.h"
+#include "email_generator.h" 
 
 void email_generator(int num) {
 
