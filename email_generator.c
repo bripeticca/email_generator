@@ -18,9 +18,21 @@ void email_generator(int num) {
     int placeholder = 0;
 
     for(int i = 0; i < 10; ++i) {
+      int random_val = rand() % len_alpha;
+      if (random_val == 0) {
+        new_email[i] = alphanumeric[random_val];
+      } else {
+      new_email[i] = alphanumeric[random_val - 1];
+    }
+    placeholder = i;
+  }
+
+    /*for(int i = 0; i < 10; ++i) {
       new_email[i] = alphanumeric[rand() % len_alpha - 1];
       placeholder = i;
-    }
+    } */
+
+    ++placeholder;
 
     new_email[placeholder] = '@';
 
