@@ -12,11 +12,11 @@ int main(void) {
   printf("Please insert the number of emails you wish to generate.\n");
 
   while(valid) {
-  if (scanf("%d", &num) == 1) {
+  if ((scanf("%d", &num) == 1) && num > 0) {
     email_generator(num);
     valid = false;
   } else {
-    printf("Insert a valid input - should be > 0 and < 100.");
+    printf("Insert a valid input - should be > 0.");
   }
 }
 return 1;

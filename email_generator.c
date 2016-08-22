@@ -8,6 +8,8 @@ void email_generator(int num) {
   const char alphanumeric[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
   const int len_alpha = sizeof(alphanumeric);
 
+  char com[4] = "com"
+
   char new_email[26];
   int len = 26;
 
@@ -33,7 +35,7 @@ void email_generator(int num) {
 
     for(int x = 0; x < 3; ++x){
       ++placeholder;
-      new_email[placeholder] = alphanumeric[rand() % len_alpha - 1];
+      new_email[placeholder] = com[x];
     }
     ++placeholder;
 
