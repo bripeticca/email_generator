@@ -8,7 +8,7 @@ void email_generator(int num) {
   const char alphanumeric[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
   const int len_alpha = sizeof(alphanumeric);
 
-  char com[4] = "com";
+  char com[] = "com";
 
   char new_email[26];
   int len = 26;
