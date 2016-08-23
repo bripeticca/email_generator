@@ -15,3 +15,5 @@
 <li>The code will generate x amount of randomized emails, using an alphanumeric array and the rand() function.</li>
 
 </ul>
+
+<h2> Enjoy! :-) </h2>
