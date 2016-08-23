@@ -10,10 +10,10 @@
 
 <li> Enter ./a.out </li>
 
-<li>Run the code and insert the number of email addresses you want to generate when asked.</li>
+<li> When prompted, insert the number of email addresses you want to generate. </li>
 
-<li>The code will generate x amount of randomized emails, using an alphanumeric array and the rand() function.</li>
+<li> The code will generate x amount of randomized emails, using an alphanumeric array and the rand() function. </li>
 
 </ul>
 
-<h2> Enjoy! :-) </h2>
+Enjoy! :-)
