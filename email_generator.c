@@ -4,59 +4,35 @@
 #include "email_generator.h"
 
 void email_generator(int num) {
-
   const char alphanumeric[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
-  const int len_alpha = sizeof(alphanumeric);
+  const int len_alpha = sizeof(alphanumeric) - 1;
+  // len_alpha has been subtracted by 1 so the algorithm below does not index
+  // the null terminator.
 
-  char com[] = "com";
+  char com[] = ".com";
+  char email[26];
+  char len = 26;
 
-  char new_email[26];
-  int len = 26;
+  int midpoint = 10;  // the point before '@'
+  int end = 21;       // represents the point just before '.com'
 
   while (num > 0) {
 
     int placeholder = 0;
 
-    for(int i = 0; i < 10; ++i) {
-      int random_val = rand() % len_alpha;
-      if (random_val == 0) {
-        new_email[i] = alphanumeric[random_val];
+    for(int i = 0; i < len; ++i){
+      if ((i < midpoint) || (i > midpoint && i < end)){
+        email[i] = alphanumeric[rand() % len_alpha];
+      } else if (i == midpoint) {
+        email[i] = '@';
       } else {
-      new_email[i] = alphanumeric[random_val - 1];
-    }
-    placeholder = i;
-  }
-
-    /*for(int i = 0; i < 10; ++i) {
-      new_email[i] = alphanumeric[rand() % len_alpha - 1];
-      placeholder = i;
-    } */
-
-    ++placeholder;
-
-    new_email[placeholder] = '@';
-
-    for(int z = 0; z < 10; ++z){
-      ++placeholder;
-      new_email[placeholder] = alphanumeric[rand() % len_alpha - 1];
+        email[i] = com[placeholder];
+        ++placeholder;
+      }
     }
 
-    ++placeholder;
+    printf("%s\n", email);
 
-    new_email[placeholder] = '.';
-
-    for(int x = 0; x < 3; ++x){
-      ++placeholder;
-      new_email[placeholder] = com[x];
-    }
-    ++placeholder;
-
-    new_email[placeholder] = '\0';
-
-    for(int y = 0; y < len; ++y) {
-      printf("%c", new_email[y]);
-    }
-    printf("\n");
     --num;
   }
-  }
+}

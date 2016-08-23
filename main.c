@@ -9,14 +9,14 @@ int main(void) {
   int num = 0;
   bool valid = true;
 
-  printf("Please insert the number of emails you wish to generate.\n");
+  printf("Please enter the number of emails you wish to generate.\n");
 
   while(valid) {
   if ((scanf("%d", &num) == 1) && num > 0) {
     email_generator(num);
     valid = false;
   } else {
-    printf("Insert a valid input - should be > 0.");
+    printf("Insert a valid input - should be greater than 0.\n");
   }
 }
 return 1;
