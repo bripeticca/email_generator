@@ -4,12 +4,6 @@
 
 <ul>
 
-<li> Clone the repository. </li>
-
-<li> In your terminal, change directories to email_generator </li>
-
-<li> Enter ./a.out </li>
-
 <li> When prompted, insert the number of email addresses you want to generate. </li>
 
 <li> The code will generate x amount of randomized emails, using an alphanumeric array and the rand() function. </li>
