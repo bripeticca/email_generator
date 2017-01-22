@@ -23,15 +23,12 @@ void email_generator(int num) {
 	  break;
       }
   }
-  
-  end += midpoint; // fixes offset
 
-  int len = midpoint + end + 5; // number of chars in midpoint + end + "@" + ".com"
-  
+  int len = midpoint + end + 5; // number of chars before and after "@", "@" itself, and ".com"
+  end += midpoint; // fixes offset 
   char *email = malloc((sizeof(char)) * len);
 
   while (num > 0) {
-
     int placeholder = 0;
 
     for(int i = 0; i < len; ++i){
@@ -39,7 +36,6 @@ void email_generator(int num) {
         email[i] = alphanumeric[rand() % len_alpha];
       } else if (i == midpoint) {
         email[i] = '@';
-
       } else {
         email[i] = com[placeholder];
         ++placeholder;
@@ -48,5 +44,7 @@ void email_generator(int num) {
     printf("%s\n", email);
     --num;
   }
+
   free(email);
+
 }
